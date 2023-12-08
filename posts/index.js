@@ -1,9 +1,11 @@
 const express=require('express');
 const {randomBytes} =require('crypto')
 const bodyPaser=require('body-parser')
+const cors=require('cors');
 
 const app=express();
 app.use(bodyPaser.json())
+app.use(cors())
 const postsList={};
 app.get('/posts',(req,res)=>{
 // return postsList;
